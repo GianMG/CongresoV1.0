@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>X Tutorial Congreso</title>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <!-- *** Librerias de JQMobile-->
+    <link href="jquery-mobile/jquery.mobile.theme-1.2.0.min.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-mobile/jquery.mobile.structure-1.2.0.min.css" rel="stylesheet" type="text/css"/>
+	<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="jquery-mobile/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+      
+<!--************** PAGINA PRINCIPAL - INICIO ****************-->
+	<div data-role="page" id="inicio" data-theme="a">
+    <!--************** INICIO - CABECERA - INDEX****************-->
+	<div data-role="header" data-theme="a" id="logo">
+        <div data-role="navbar">
+            <ul> 
+            	<li><a href="#inicio" data-theme="a">
+              		<h1> Mi Primera Aplicacion Hibrida</h1>
+                  </a>
+              </li>
+            </ul>      
+   		</div>
+    </div>
+    <!--************** FIN - CABECERA - INDEX****************-->
+    <!--************** INICIO - CUERPO - INDEX****************-->
+	<div data-role="content" data-theme="a" > 
+        <ul>
+            <a><h3>Bienvenidos al Tutorial, escoja: </h3></a>
+        </ul>
+        </br>
+        <ul data-role="listview" data-inset="true" data-filter="true">
+                </br>
+	            <li><a href="#feature">Opcion Features</a></li>
+	            <li><a href="#other">Opcion Other</a></li>
+	    </ul> 		
+	</div>
+    <!--************** FIN - CUERPO - INDEX****************-->
+    <!--************** INICIO - PIE - INDEX****************-->
+    <div data-role="footer" data-theme="a" data-position="fixed">
+   		<div data-role="navbar" data-theme="a" >
+            <ul> 
+                <li><a href="#inicio" class="ui-btn-active" data-icon="home">Inicio</a></li>
+                <li><a href="#feature" data-icon="grid">Features</a></li> 
+                <li><a href="#other" data-icon="grid">Other</a></li> 
+            </ul> 
+		</div>
+        	<p align="center" class="copyright">Windows Phone & PhoneGap</p> 
+    </div>
+    <!--************** FIN - PIE - INDEX****************-->
+    </div>
+<!--************** PAGINA PRINCIPAL - FIN ****************-->
+       
+
+<!--************** PAGINA FEATURE - INICIO ****************-->
+    <div data-role="page" id="feature" data-theme="a" data-add-back-btn="true">
+	<!--************** INICIO - CABECERA - FEATURE ****************-->
+	<div data-role="header" data-theme="a">
+		<a href="#inicio" data-rel="back" data-icon="arrow-l">Atr&aacute;s</a>
+        <h1>Nosotros</h1>
+	</div>
+    <!--************** FIN - CABECERA - FEATURE ****************-->
+    <!--************** INICIO - CUERPO - FEATURE ****************-->
+	<div data-role="content" data-theme="a" > 
+            <div data-role="fieldcontain">
+				<label>Mensaje Congreso:</label>
+				<button href="#" onclick="MostrarConfirmacion(); return false;">Mostrar Confirmacion</button>
+			</div>
+			<div data-role="fieldcontain">
+				<label>Opcion Foto:</label>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#" onclick="capturePhotoEdit();">Capturar Foto</a></li>
+	                <li><a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Foto de la Biblioteca de Fotos</a></li>
+	                <li><a href="#" onclick="capturePhotoEdit();">Capturar Foto Editable</a></li>
+                    <li><a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Foto del Album de Fotos</a></li>
+                    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+                    <img style="display:none;" id="largeImage" src="" />
+                </ul>   
+            </div>
+	</div>
+    <!--************** FIN - CUERPO - FEATURE ****************-->
+    <!--************** INICIO - PIE - FEATURE ****************-->
+    <div data-role="footer" data-theme="a" data-position="fixed">
+   		<div data-role="navbar" data-theme="a" >
+            <ul> 
+                <li><a href="#inicio" class="ui-btn-active" data-icon="home">Inicio</a></li>
+                <li><a href="#feature" data-icon="grid">Features</a></li> 
+                <li><a href="#camera" data-icon="grid">Other</a></li> 
+            </ul> 
+		</div>
+        	<p align="center" class="copyright">Windows Phone & PhoneGap</p> 
+    </div>  
+    <!--************** FIN - PIE - FEATURE ****************-->
+    </div>
+<!--************** PAGINA FEATURE - FIN ****************-->
+  </body>
+</html>
