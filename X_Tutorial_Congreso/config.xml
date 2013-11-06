@@ -45,5 +45,7 @@
 
 
   <access origin="*"/>
+  <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
+  <gap:platform name="winphone" />
 </widget>
